@@ -1,4 +1,5 @@
-const formatValue =(value:string | number | boolean)=>{
+type FormatValue = string | number | boolean
+const formatValue =(value:FormatValue)=>{
     if(typeof value === "string"){
         return value.toLocaleUpperCase()
     }else if(typeof value === "number"){
@@ -8,4 +9,11 @@ const formatValue =(value:string | number | boolean)=>{
     }
 }
 
-console.log(formatValue(false));
+const getLength = <T>(value:string | Array<T>) => {
+
+    if(typeof value === "string"){
+        return value.length
+    }else{
+        return value.length
+    }
+}
