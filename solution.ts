@@ -61,8 +61,20 @@ interface Book{
     isAvailable:boolean;
 }
 
-
 const printBookDetails = (obj:Book) => {
     const {title,author, publishedYear,isAvailable} = obj;
     console.log(`Title: ${title}, Author: ${author}, Published: ${publishedYear}, Available: ${isAvailable}`);
 }
+
+
+type arrOfMixedType = string | number;
+
+const getUniqueValues = (arr1:arrOfMixedType[], arr2:arrOfMixedType[]):arrOfMixedType[]=>{
+    const mergedArr = arr1.concat(arr2)
+    const uniqueArr = Array.from(new Set(mergedArr))
+    return uniqueArr;
+}
+
+const array1 = [1, 2, 3, 4, 5];
+const array2 = [3, 4, 5, 6, 7];
+console.log(getUniqueValues(array1, array2));
