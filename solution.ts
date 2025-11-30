@@ -31,3 +31,13 @@ class Person{
         return `Name: ${this.name}, Age: ${this.age}`
     }
 }
+
+
+type ArrayOfObject = Array<{
+    title:string;
+    rating:number
+}>
+
+const filterByRating = (books:ArrayOfObject)=>{
+    return books.filter((book)=> book.rating >= 4)
+}
