@@ -41,3 +41,15 @@ type ArrayOfObject = Array<{
 const filterByRating = (books:ArrayOfObject)=>{
     return books.filter((book)=> book.rating >= 4)
 }
+
+
+interface User {
+    id: number;
+    name: string;
+    email:string;
+    isActive:boolean;
+}
+const filterActiveUsers = (users:User[]):User[]=>{
+    return users.filter((user)=> user.isActive);
+
+}
