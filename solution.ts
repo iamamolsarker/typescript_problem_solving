@@ -64,7 +64,5 @@ interface Book{
 
 const printBookDetails = (obj:Book) => {
     const {title,author, publishedYear,isAvailable} = obj;
-
     console.log(`Title: ${title}, Author: ${author}, Published: ${publishedYear}, Available: ${isAvailable}`);
-
 }
