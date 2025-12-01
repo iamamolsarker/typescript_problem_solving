@@ -75,6 +75,26 @@ const getUniqueValues = (arr1:arrOfMixedType[], arr2:arrOfMixedType[]):arrOfMixe
     return uniqueArr;
 }
 
-const array1 = [1, 2, 3, 4, 5];
-const array2 = [3, 4, 5, 6, 7];
-console.log(getUniqueValues(array1, array2));
+interface Products{
+    name:string;
+    price:number;
+    quantity:number;
+    discount?:number;
+}
+
+const calculateTotalPrice = (products:Products[]):number =>{
+    const subTotal = products.reduce((total, product)=>{
+        const {price, quantity, discount=0} = product;
+
+        return total + (price * quantity) - (price * quantity * discount/100)
+    },0)
+    return subTotal;
+}
+
+const products = [
+  { name: 'Pen', price: 10, quantity: 2 },
+  { name: 'Notebook', price: 25, quantity: 3, discount: 10 },
+  { name: 'Bag', price: 50, quantity: 1, discount: 20 },
+];
+
+console.log(calculateTotalPrice(products));
