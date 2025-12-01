@@ -28,7 +28,7 @@ class Person{
     }
 
     getDetails(){
-        return `Name: ${this.name}, Age: ${this.age}`
+        return `'Name: ${this.name}, Age: ${this.age}'`
     }
 }
 
@@ -90,11 +90,3 @@ const calculateTotalPrice = (products:Products[]):number =>{
     },0)
     return subTotal;
 }
-
-const products = [
-  { name: 'Pen', price: 10, quantity: 2 },
-  { name: 'Notebook', price: 25, quantity: 3, discount: 10 },
-  { name: 'Bag', price: 50, quantity: 1, discount: 20 },
-];
-
-console.log(calculateTotalPrice(products));
