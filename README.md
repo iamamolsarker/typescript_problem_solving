@@ -20,4 +20,16 @@ type - Declaration Merging সাপোর্ট করে না
 type- union/intersection, primitive alias, utility type তৈরিতে বেশি ব্যবহৃত হয়
 intersection- object, class তৈরিতে বেশি ব্যবহৃত হয়
 
+# TypeScript-এ keyof কীওয়ার্ডের ব্যবহার
+
+keyof হলো TypeScript-এর একটি অপারেটর, যা কোনো object type-এর সব key (property names) নিয়ে একটি union টাইপ তৈরি করে।
+এটি সাধারণত extends, typeof, এবং in এর সাথে ব্যবহার করা হয়।
+```
+type Person = {
+  name: string;
+  age: number;
+  isMarried: boolean;
+};
+```
+
 
