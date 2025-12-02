@@ -45,3 +45,20 @@ type PersonKeys = keyof Person;
 ```
 এটা  extend, typeof as in এ অপারেটর গুলোর সাথে যুক্ত হয়েও কাজ করে
 
+# Explain the difference between any, unknown, and never types in TypeScript
+
+<h3>any, unkown, never</h3>
+যখন আমরা শিউর করে বলতে পারি না যে Value টাইপ কি হবে, তখন আমরা any অথবা unknown ব্যবহার করি
+
+আবার never ব্যবহার করা হয় যখন আমাদের কাছে কোনো data type থাকে না এবং আমাদের কাছে কোনো valueনেই
+# any
+any ব্যবহার করলে কোনো ধরনের type checking করা হয় না 
+
+# unknown
+
+unknown আমাদেরকে বাধ্যতামূলক ভাবে টাইপ চেক করতে বলে, মানে ব্যবহার করার আগে নিশ্চিত হতে হবে এটা কোন টাইপের ভ্যালু 
+
+# never
+অন্যদিকে never তখন ব্যবহার করা হয় যখন কোন value আসার posibility থাকে না
+
+ এটা দিয়ে বোঝায় functionকোন কিছু return করবে না
