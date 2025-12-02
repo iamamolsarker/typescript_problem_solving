@@ -43,5 +43,5 @@ type PersonKeys = keyof Person;
 ```
 "name" | "age" | "isMarried"
 ```
-
+এটা  extend, typeof as in এ অপারেটর গুলোর সাথে যুক্ত হয়েও কাজ করে
 
